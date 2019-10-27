@@ -88,11 +88,14 @@ function Enterprise() {
     rect(-this.r + 11, this.r - 5, this.r - 17, this.r);
     rect(-this.r + 26, this.r - 5, this.r - 17, this.r);
     rect(-this.r + 12, this.r, this.r - 5, this.r - 18);
+
+    // Draws the stars
     strokeWeight(random(1, 5));
     stroke(255);
     point(random(-400, 200), random(200, -400));
   }
 
+  // Allows Enterprise to appear on the canvas again after it falls off the edge boundaries
   this.edges = function() {
     if (this.pos.x > width + this.r) {
       this.pos.x = -this.r;
